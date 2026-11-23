@@ -1,3 +1,5 @@
+import { applicationFieldLabels } from '../../types/applicationFields';
+
 interface TableHeadProps {
   showActions?: boolean;
 }
@@ -6,11 +8,11 @@ function TableHead({ showActions = false }: TableHeadProps) {
   return (
     <thead className="table-light">
       <tr>
-        <th>Company Name</th>
-        <th>Position</th>
-        <th>Experience</th>
-        <th>Status</th>
-        <th>Applied Date</th>
+        <th>{applicationFieldLabels.companyName}</th>
+        <th>{applicationFieldLabels.position}</th>
+        <th>{applicationFieldLabels.experienceYears}</th>
+        <th>{applicationFieldLabels.status}</th>
+        <th>{applicationFieldLabels.appliedDate}</th>
         {showActions && <th>Actions</th>}
       </tr>
     </thead>
