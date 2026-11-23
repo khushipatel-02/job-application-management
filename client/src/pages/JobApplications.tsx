@@ -4,6 +4,7 @@ import axios from 'axios';
 import JobTable from '../components/jobs/JobTable';
 import JobForm from '../components/jobs/JobForm';
 import ConfirmModal from '../components/common/ConfirmModal';
+import { applicationFieldLabels } from '../types/applicationFields';
 
 import type {
   JobApplication,
@@ -256,37 +257,37 @@ function JobApplications() {
                 <div className="modal-body">
                   <div className="row g-3">
                     <div className="col-md-6">
-                      <strong>Company Name</strong>
+                      <strong>{applicationFieldLabels.companyName}</strong>
                       <p>{viewingApplication.companyName}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Company Email</strong>
+                      <strong>{applicationFieldLabels.email}</strong>
                       <p>{viewingApplication.email}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Phone Number</strong>
+                      <strong>{applicationFieldLabels.phone}</strong>
                       <p>{viewingApplication.phone || '-'}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Position</strong>
+                      <strong>{applicationFieldLabels.position}</strong>
                       <p>{viewingApplication.position}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Experience</strong>
-                      <p>{viewingApplication.experienceYears} Years</p>
+                      <strong>{applicationFieldLabels.experienceYears}</strong>
+                      <p>{viewingApplication.experienceYears}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Status</strong>
+                      <strong>{applicationFieldLabels.status}</strong>
                       <p>{viewingApplication.status}</p>
                     </div>
 
                     <div className="col-md-6">
-                      <strong>Applied Date</strong>
+                      <strong>{applicationFieldLabels.appliedDate}</strong>
                       <p>{formatDate(viewingApplication.appliedDate)}</p>
                     </div>
                   </div>

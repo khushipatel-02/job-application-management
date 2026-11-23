@@ -2,11 +2,8 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import axios from 'axios';
 
-import type {
-  ApplicationStatus,
-  JobApplication,
-  JobApplicationInput,
-} from '../../types/job';
+import type { ApplicationStatus, JobApplication, JobApplicationInput} from '../../types/job';
+import { applicationFieldLabels } from '../../types/applicationFields';
 
 import { getTodayDate } from '../../utils/formatDate';
 
@@ -68,7 +65,7 @@ function JobForm({
 
       <div className="row g-3">
         <div className="col-md-6">
-          <label className="form-label">Company Name</label>
+          <label className="form-label">{applicationFieldLabels.companyName}</label>
           <input
             type="text"
             className="form-control"
@@ -80,7 +77,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Company Email</label>
+          <label className="form-label">{applicationFieldLabels.email}</label>
           <input
             type="email"
             className="form-control"
@@ -92,7 +89,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Phone Number</label>
+          <label className="form-label">{applicationFieldLabels.phone}</label>
           <input
             type="tel"
             className="form-control"
@@ -104,7 +101,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Position</label>
+          <label className="form-label">{applicationFieldLabels.position}</label>
           <input
             type="text"
             className="form-control"
@@ -116,7 +113,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Experience (Years)</label>
+          <label className="form-label">{applicationFieldLabels.experienceYears}</label>
           <input
             type="number"
             className="form-control"
@@ -131,7 +128,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Status</label>
+          <label className="form-label">{applicationFieldLabels.status}</label>
           <select
             className="form-select"
             value={formData.status}
@@ -147,7 +144,7 @@ function JobForm({
         </div>
 
         <div className="col-md-6">
-          <label className="form-label">Applied Date</label>
+          <label className="form-label">{applicationFieldLabels.appliedDate}</label>
           <input
             type="date"
             className="form-control"
